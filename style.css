@@ -37,6 +37,13 @@ body {
     background-attachment: fixed;
 }
 
+img {
+    height: 1em;
+    width: auto;
+    max-width: 1em;
+    vertical-align: middle;
+}
+
 /* Headings */
 h1 {
     font-size: var(--h1-size);
@@ -88,6 +95,7 @@ nav {
 
 .logo img {
     width: 45px;
+    max-width: none;
     height: 45px;
     object-fit: cover;
     border-radius: 50%;
@@ -117,6 +125,7 @@ nav {
 }
 .language-selector img{
     width: 28px;
+    max-width: none;
     height: auto;
     display: block;
     border: 1px solid var(--white);
@@ -177,6 +186,8 @@ section {
 .column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 25px;
 }
 
@@ -220,6 +231,7 @@ section {
 .company img{
     width: 100%;
     max-height: 80%;
+    height: auto;
     object-fit: contain;
     margin-top: 10px;
     background-color: white;
@@ -320,8 +332,25 @@ section {
     color: var(--grey);
     margin-bottom: 5px;
 }
-.school img {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.row a{
+    text-decoration: none;
+    padding: 10px;
+    color: var(--white);
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    background: var(--black);
+}
+
+.row a:hover{
+    color: var(--black);
+    background: var(--grey);
 }
